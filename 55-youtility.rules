@@ -1,0 +1,8 @@
+#
+# udev rules file for Iden.tt Key
+#
+SUBSYSTEMS!="usb", ACTION!="add", GOTO="identt_key_rules_end"
+
+ATTRS{idVendor}=="1781", ATTRS{idProduct}=="0a1e", GROUP="identt", MODE="0664"
+
+LABEL="identt_key_rules_end"
